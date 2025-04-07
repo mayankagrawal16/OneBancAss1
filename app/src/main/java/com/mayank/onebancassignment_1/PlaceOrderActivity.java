@@ -1,4 +1,3 @@
-
 package com.mayank.onebancassignment_1;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -36,6 +36,11 @@ public class PlaceOrderActivity extends AppCompatActivity {
         // Get the order list from the intent
         orderList = (List<Dish>) getIntent().getSerializableExtra("orderList");
 
+        if (orderList == null) {
+            Toast.makeText(this, "No items in the order list", Toast.LENGTH_SHORT).show();
+            finish(); // or redirect to another activity
+            return;
+        }
         orderAdapter = new OrderAdapter(orderList);
         orderRecyclerView.setAdapter(orderAdapter);
 

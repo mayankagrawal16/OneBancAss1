@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OneBancAssignment_1</string>
+    <string name="language_button">Change Language</string>
 </resources>

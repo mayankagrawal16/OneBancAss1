@@ -30,7 +30,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         Dish dish = cartList.get(position);
         holder.dishName.setText(dish.getName());
-        holder.dishImage.setImageResource(dish.getImageResId());
+        holder.dishImage.setImageResource(dish.getImageResourceId());
         holder.dishPrice.setText("Rs. " + dish.getPrice());
     }
 

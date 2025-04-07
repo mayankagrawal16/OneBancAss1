@@ -37,7 +37,7 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.DishViewHolder
     public void onBindViewHolder(@NonNull DishViewHolder holder, int position) {
         Dish dish = dishList.get(position);
         holder.dishName.setText(dish.getName());
-        holder.dishImage.setImageResource(dish.getImageResId());
+        holder.dishImage.setImageResource(dish.getImageResourceId());
         holder.dishPrice.setText("Rs. " + dish.getPrice());
         holder.addButton.setOnClickListener(new View.OnClickListener() {
             @Override

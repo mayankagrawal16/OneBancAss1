@@ -30,7 +30,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
         Dish dish = orderList.get(position);
         holder.dishName.setText(dish.getName());
-        holder.dishImage.setImageResource(dish.getImageResId());
+        holder.dishImage.setImageResource(dish.getImageResourceId());
         holder.dishPrice.setText("Rs. " + dish.getPrice());
     }
 
